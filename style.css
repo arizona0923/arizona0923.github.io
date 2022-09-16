@@ -87,9 +87,9 @@ header nav ul li a {
 }
 .projects .container {
     display: grid;
-    grid-template-columns:50% 50%;
+    grid-template-columns:25% 25%;
     justify-content: center;
-    grid-gap: 3%;
+    grid-gap: 10%;
     border-radius: 25px;
     margin-left: 15%;
     margin-right: 15%;
@@ -210,7 +210,7 @@ header nav ul li a {
     text-align: center;
 }
 .email h1 {
-    padding-top: 35%;
+    padding-top: 25%;
 }
 form{
     margin: 35px;
