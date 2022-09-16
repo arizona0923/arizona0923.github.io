@@ -104,6 +104,7 @@ header nav ul li a {
 }
 .projects .container .one img {
     border-radius: 25px;
+    width: 75%;
     padding: 8px;
 }
 .projects .container .one .btn {
@@ -225,10 +226,10 @@ form #name {
 
 
 
-@media screen and (max-width:860px) {
+@media screen and (max-width:600px) {
     body{
-        max-width: 500px!important;
-        width: 500px!important;
+        max-width: 600px!important;
+        width: 600px!important;
     } 
     .hero .icons .icon img {
         width: 40px!important;
@@ -238,11 +239,17 @@ form #name {
         width: 150px!important;
         justify-content:center!important;
     }
+}
+@media screen and (max-width:500px) {
+    
     .projects .container {
         display: grid!important;
         grid-template-columns: 50% 50%!important;
 }
-    .projects .container img {
-        width: 200px;
+    .projects .container a img {
+        width: 150px;
+    }
+    .projects .container {
+        padding-bottom:80%!important;
     }
 }
