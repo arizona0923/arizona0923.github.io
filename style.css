@@ -32,8 +32,7 @@ header nav ul li a {
     display: block;
     padding: 8px;
     text-decoration: none;
-    
-    text-shadow: 2px 2px #0bffff;
+    color: black;
 }
 .hero {
     height: 80vh;
@@ -81,8 +80,7 @@ header nav ul li a {
     width: 100%;
     background-color: #cbcdcf;
     text-align: center;
-    padding-top:10%;
-    text-shadow: 2px 2px #0bffff;
+    padding-top:5%;
     padding-bottom:50%;
 }
 .projects .container {
@@ -123,7 +121,7 @@ header nav ul li a {
     font-size: large;
 }
 .aboutme {
-    height: 110vh;
+    height: 120vh;
     width: 100%;
     text-align: center;
     padding-top:3%;
@@ -132,7 +130,6 @@ header nav ul li a {
     text-align: center;
     background-color: #9a9d9e86;
     
-    text-shadow: 2px 2px #0bffff;
 }
 .aboutme .intro .top {
     display: flex;
@@ -141,6 +138,9 @@ header nav ul li a {
     border-radius:25px;
     box-shadow: 2px 2px black;
     background-color: aliceblue;
+}
+.aboutme .intro .top a {
+    text-decoration: none;
 }
 .aboutme .intro .middle {
     justify-content: space-between;
@@ -199,7 +199,7 @@ header nav ul li a {
     color:black;
 }
 .email {
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     background-color: #cbcdcf;
     text-align: center;
@@ -225,17 +225,7 @@ form #name {
 
 
 
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:600px) {
+@media screen and (max-width:860px) {
     body{
         max-width: 600px!important;
         width: 600px!important;
@@ -243,5 +233,16 @@ form #name {
     .hero .icons .icon img {
         width: 40px;
         height: 40px;
+    }
+    .hero img {
+        width: 150px;
+        justify-content:center;
+    }
+    .projects .container {
+        display: grid;
+        grid-template-columns: 50% 50%;;
+}
+    .projects .container img {
+        width: 200px;
     }
 }
