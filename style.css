@@ -123,7 +123,7 @@ header nav ul li a {
     font-size: large;
 }
 .aboutme {
-    height: 120vh;
+    height: 150vh;
     width: 100%;
     text-align: center;
     padding-top:3%;
@@ -185,6 +185,7 @@ header nav ul li a {
     border-radius:25px;
     box-shadow: 2px 2px black;
     background-color: aliceblue;
+    
 }
 .aboutme .certs .list{
     display: flex;
@@ -201,7 +202,6 @@ header nav ul li a {
     color:black;
 }
 .email {
-    padding-top: 20%;
     height: 100vh;
     width: 100%;
     background-color: #cbcdcf;
@@ -251,7 +251,7 @@ form #name {
     .projects .container a img {
         width: 150px;
     }
-    .projects .container {
-        padding-bottom:80%!important;
+    .email {
+        padding-top: 25%;
     }
 }
