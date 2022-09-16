@@ -208,7 +208,9 @@ header nav ul li a {
     width: 100%;
     background-color: #cbcdcf;
     text-align: center;
-    
+}
+.email h1 {
+    padding-top: 35%;
 }
 form{
     margin: 35px;
