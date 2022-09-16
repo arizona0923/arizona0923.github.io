@@ -202,7 +202,6 @@ header nav ul li a {
     color:black;
 }
 .email {
-    margin-top: 25%;
     height: 100vh;
     width: 100%;
     background-color: #cbcdcf;
@@ -250,9 +249,9 @@ form #name {
         grid-template-columns: 50% 50%!important;
 }
     .projects .container a img {
-        width: 150px;
+        width: 150px!important;;
     }
     .email {
-        padding-top: 25%;
+        padding-top: 25%!important;;
     }
 }
