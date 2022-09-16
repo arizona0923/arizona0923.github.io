@@ -49,6 +49,7 @@ header nav ul li a {
     border-radius: 20px;
     float:right;
     margin-right: 10%;
+    width: 25%;
     margin-top: -3%;
     position: relative;
     border: 3px solid rgb(192, 190, 190);
