@@ -9,6 +9,7 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
+    justify-items: center;
 }
 header {
     display: block;
@@ -88,10 +89,11 @@ header nav ul li a {
     display: grid;
     grid-template-columns:50% 50%;
     justify-content: center;
-    grid-gap: 10%;
+    grid-gap: 3%;
     border-radius: 25px;
     margin-left: 15%;
     margin-right: 15%;
+    margin-bottom: 15%;
     justify-content: center;
     padding-top: 5%;
 }
