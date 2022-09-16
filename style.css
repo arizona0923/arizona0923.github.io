@@ -247,7 +247,7 @@ form #name {
 }
 @media screen and (max-width:500px) {
     .projects {
-        height: 120vh;
+        height: 160vh;
         width: 100%;
     }
     .projects .container {
