@@ -247,7 +247,7 @@ form #name {
 }
 @media screen and (max-width:500px) {
     .projects {
-        height: 150vh;
+        height: 120vh;
         width: 100%;
     }
     .projects .container {
@@ -260,6 +260,6 @@ form #name {
         width: 150px!important;;
     }
     .email {
-        padding-top: 25%!important;;
+        padding-top: 15%!important;;
     }
 }
