@@ -125,7 +125,7 @@ header nav ul li a {
     font-size: large;
 }
 .aboutme {
-    height: 120vh;
+    height: 150vh;
     width: 100%;
     text-align: center;
     padding-top:3%;
@@ -187,7 +187,6 @@ header nav ul li a {
     border-radius:25px;
     box-shadow: 2px 2px black;
     background-color: aliceblue;
-    
 }
 .aboutme .certs .list{
     display: flex;
