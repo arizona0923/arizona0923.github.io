@@ -87,9 +87,9 @@ header nav ul li a {
 }
 .projects .container {
     display: grid;
-    grid-template-columns:25% 25%;
+    grid-template-columns:35% 35%;
     justify-content: center;
-    grid-gap: 10%;
+    grid-gap: 1%;
     border-radius: 25px;
     margin-left: 15%;
     margin-right: 15%;
@@ -247,10 +247,13 @@ form #name {
     }
 }
 @media screen and (max-width:500px) {
-    
+    .projects {
+        height: 120vh;
+        width: 100%;
+    }
     .projects .container {
-        display: grid!important;
-        grid-template-columns: 50% 50%!important;
+        width: 800px;
+        display: inline;
 }
     .projects .container a img {
         width: 150px!important;;
