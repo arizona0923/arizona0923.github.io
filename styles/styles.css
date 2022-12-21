@@ -535,8 +535,8 @@ section {
 .contact-content-con .left-contact .contact-icon .linked:hover {
   background-color: var(--color-of-certificates);
 }
-  .contact-content-con .left-contact .contact-icon .github:hover {
-    background-color: var(--color-github);
+.contact-content-con .left-contact .contact-icon .github:hover {
+  background-color: var(--color-github);
 }
 .contact-content-con .left-contact .contact-icon a:hover i {
   color: var(--main-background-color);
@@ -580,8 +580,12 @@ section {
   border: 2px solid var(--color-of-email-lines);
   text-align: center
 }
-
-/*Independed components*/
+.contact-content-con .right-contact #submit-btn{
+  color:rgb(4, 146, 182);
+  font-size: 24px;
+  border: 5px solid rgb(128, 246, 250);
+}
+/*Independent components*/
 .btn-con {
   display: flex;
   align-self: flex-start;
