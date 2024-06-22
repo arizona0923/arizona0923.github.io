@@ -424,6 +424,12 @@ nav {
     transform: scale(1.2); /* Slightly increase size on hover */
 }
 
+.contact-section-footer {
+    background-color: #003f5c; /* Dark navy blue */
+    padding: 20px 0;
+    text-align: center;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     header {
