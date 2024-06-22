@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin:0 auto;
+            background-color: rgb(247, 246, 245);
+            width:100%;
+            max-width:600px;
+            font-family: Helvetica Neue, Arial, sans-serif;
+        }
+        table {
+            border-spacing: 0;
+        }
+        td {
+            padding: 0;
+        }
+        img {
+            border:0;
+        }
+        .wrapper {
+            width:100%;
+            table-layout:fixed;
+            background-color: white;
+            padding-bottom: 40px;
+        }
+        .main {
+            background-color: white;
+            max-width:600px;
+            border-spacing: 0;
+            color:white;
+        }
+        .first-banner {
+            position:relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+        }
+        .first-banner img {
+            vertical-align: bottom;
+        }
+        .second-banner {
+            position:relative;
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+        }
+        .second-banner img {
+            vertical-align: bottom;
+        }
+        .third-banner {
+            position:relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+        }
+        .third-banner img {
+            vertical-align: bottom;
+        }
+
+        @media screen and (max-width:600px) {
+            .main {
+                max-width: 300px;
+            }
+        }
+        </style>
+</head>
+
+<body>
+    <center class="wrapper">
+        <table class="main" width="100%">
+            <!--thin red line-->
+            <tr>
+                <td height="8" style="background-color:red">
+                </td>
+            </tr>
+            <!--logo-->
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: center; padding:10px;">
+                                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Target_logo.svg/1541px-Target_logo.svg.png" alt="target-logo" width="100" style="max-width: 100%;" title="target"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <!--main banner section fix scaling issue( 20% off 2 day sale)-->
+            <tr>
+                <td class="first-banner">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <a href="#"><img src="/Htmlemail-assets/target.jpg" alt="banner" width="600" style="max-width:100%;"></a>
+                            </td>   
+                            
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="8" style="background-color:rgb(255, 255, 255)">
+                </td>
+            </tr>
+            <!--second banner-->
+            <tr>
+                <td class="second-banner">
+                    <a href="#"><img src="/Htmlemail-assets/giftcards.jpg" alt="banner" width="600" style="max-width:100%;"></a>
+                </td>
+            </tr>
+            <tr>
+                <td height="8" style="background-color:rgb(255, 255, 255)">
+                </td>
+            </tr>
+            <!--third banner section? also fix scalling and placements of prices (plants and home decorations)-->
+            <tr>
+                <td class="third-banner">
+                    <img src="/Htmlemail-assets/Home-Decor_36p31urss.jpg" alt="banner" width="600" style="max-width:100%;">
+                </td>
+            </tr>
+            <tr>
+                <td height="8" style="background-color:red">
+                </td>
+            </tr>
+            <tr>
+                <td class="second-banner">
+                    <a href="#"><img src="/Htmlemail-assets/TARGET_B.jpg" alt="banner" width="600"style="max-width:100%;"></a>
+                </td>
+            </tr> 
+            <tr>
+                <td height="8" style="background-color:red">
+                </td>
+            </tr>
+            <!--footer-->
+            <tr>
+                <td>
+                    <table style="text-align:center; padding: 8px; background-color: red; color: black;">
+                        <tr>
+                            <td style="background-color: white; padding: 1px; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                                <h3>Get Top Deals, Latest Trends and More <input type="email" id="text" placeholder="Enter Email" style="padding:8px; border-radius:25px;"></h3>
+                                <button style="background-color:red; color: white; border-radius:25px; padding: 8px;border-width: 0;font-size:large;"> Sign Up</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: white; padding: 1px;"><p><strong>*See offer details.</p></strong> Restrictions apply. Pricing, promotions and availability may vary by location and at Target.com</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="100%" style="background-color:rgb(233, 233, 233); ; font-size:18px; text-align: center; padding: 8px;border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
+                                    <tr>
+                                        <td>About us</td>
+                                        <td>Help</td>
+                                        <td>Store</td>
+                                        <td>Services</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Careers</td>
+                                        <td>Returns</td>
+                                        <td>Find a Clinic</td>
+                                        <td>Target App</td>
+                                    </tr>
+                                    <tr>
+                                        <td>News Blog</td>
+                                        <td>Help</td>
+                                        <td>Pharmacy</td>
+                                        <td>Red Card</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advertise With us</td>
+                                        <td>track Orders</td>
+                                        <td>Optical</td>
+                                        <td>Registry</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:10px;" colspan="4">
+                                            <a href="#"><img src="/Htmlemail-assets/2560px-Target_old_logo.svg.png"  alt="target-logo" width="100" style="max-width: 600px; text-align: center;" title="target"></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!--bottom banner section-->
+            <tr>
+                <td>
+                    <a href="#"><img src="/Htmlemail-assets/c762x200.jpg" alt="banner" width="600"style="max-width:100%;"></a>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

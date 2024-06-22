@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Newsletter</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #f7f7f7;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+        .main {
+            background-color: #ffffff;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            border-spacing: 0;
+            color: #4a4a4a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .socials {
+            padding: 20px 0;
+            background-color: #686de0;
+        }
+        .button {
+            color: #ffffff;
+            border: 3px solid white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .purple {
+            background-color: #686de0;
+            color: white;
+        }
+        .orange {
+            background-color: #e67e22;
+            color: white;
+        }
+        .green {
+            background-color: #00704A;
+            color: white;
+        }
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 0;
+        }
+        .two-columns .column {
+            width: 45%;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+        .two-columns .column img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .two-columns .column p {
+            margin-top: 15px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .footer {
+            padding: 30px 10px;
+            background-color: #00704A;
+            color: white;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        @media screen and (max-width: 600px) {
+            .two-columns .column {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <table class="main" width="100%">
+            <!-- Social Media Icons -->
+            <tr class="socials">
+                <td>
+                    <a href="#"><img src="https://i.ibb.co/09KvhhW/white-facebook.png" alt="Facebook" width="50"></a>
+                    <a href="#"><img src="https://i.ibb.co/4Z4zfhD/white-instagram.png" alt="Instagram" width="50"></a>
+                </td>
+            </tr>
+            <!-- Logo Section -->
+            <tr class="orange">
+                <td style="padding: 20px;">
+                    <a href="https://www.starbucks.com/">
+                        <img src="https://play-lh.googleusercontent.com/rl4CbJOdFGWGgvDoxFSuiafiW6gfDpgE0OzIzmsE_Il4ELascpLZY0YSN2qnxuI-75o" alt="Starbucks Logo" width="300" height="150" style="border-radius: 15px; margin: 10px;">
+                    </a>
+                    <a href="https://www.starbucks.com/menu?_branch_match_id=946972478946179260&utm_source=Web&utm_campaign=Pickup&utm_medium=marketing&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy5JLEoqTc4u1kssKNDLyczL1g93LCkoD88J8zMBAJNjLXolAAAA">
+                        <img src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/143-67484.png" alt="Order Here" width="200" height="150" style="border-radius: 15px; margin: 10px;">
+                    </a>
+                </td>
+            </tr>
+            <!-- Frozen PSL GIF Image -->
+            <tr class="green">
+                <td>
+                    <a href="#"><img src="https://images.squarespace-cdn.com/content/v1/56ad6fa8fd5d088a88b82f29/1592344290288-TGPQ80PQ73TQFAHGUSFE/Frappuccino_Splash.gif" alt="Banner" width="600" style="max-width: 100%;"></a>
+                </td>
+            </tr>
+            <!-- New Drink Collection -->
+            <tr class="green">
+                <td style="padding: 20px;">
+                    <p style="font-weight: bold; text-decoration: underline;">NEW FALL DRINKS LIMITED TIME ONLY:</p>
+                    <p>Frozen Pumpkin Spice Latte</p>
+                    <p>Pumpkin Cream and Brown Sugar Cold Brew</p>
+                    <p>Apple Cinnamon Macchiato</p>
+                    <p>Caramel Dark Roast</p>
+                    <a href="https://www.starbucks.com/menu/featured/" class="button" style="background-color: #686de0;">SEE THE NEW DRINK COLLECTION!</a>
+                </td>
+            </tr>
+            <!-- Two Column Section -->
+            <tr class="purple">
+                <td>
+                    <div class="two-columns">
+                        <div class="column">
+                            <a href="https://www.starbucks.com/menu/product/2122864/iced">
+                                <img src="https://i.insider.com/5bc0f238bde70f04c12f82fe?width=1136&format=jpeg" alt="Two Starbucks Drinks">
+                            </a>
+                            <p>Sneak Peek At Our New Halloween Drinks!</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://stories.starbucks.com/stories/the-starbucks-foundation/">
+                                <img src="https://starbmag.com/wp-content/uploads/2022/06/Does-Starbucks-Do-Fundraisers.png" height="170" alt="Fundraiser">
+                            </a>
+                            <p>Donate To This Week's Rotating Charity</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.starbucks.com/gift">
+                                <img src="https://cdn.shopify.com/s/files/1/0073/0929/5674/products/BABitems-511_3811x.jpg?v=1644361765" alt="Gift Cards">
+                            </a>
+                            <p>Buy Someone A Coffee!</p>
+                            <p style="font-weight: normal;">A Simple Electronic Gift Card You Can Send To Friends</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://stories.starbucks.com/stories/2016/how-to-make-starbucks-cold-brew-at-home/">
+                                <img src="https://athome.starbucks.com/sites/default/files/2021-09/ColdBrew_Step3_Saturate.jpg" alt="Cold Brew Kit">
+                            </a>
+                            <p>Learn How To Make A Simple Cold Brew At Home</p>
+                            <p style="font-weight: normal;">4 Steps To The Best Morning Ever</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!-- Orange Background Quote -->
+            <tr class="orange">
+                <td style="padding: 20px;">
+                    <p style="font-size: 20px; font-weight: bold;">Try Ordering from the SECRET MENU!</p>
+                    <p style="font-size: larger; font-weight: bold; text-decoration: underline;">"Cake Batter Frappuccino"</p>
+                    <p><strong>1 Vanilla Bean Crème Frappuccino</strong></p>
+                    <p><strong>1 Pump Hazelnut Syrup</strong></p>
+                    <p><strong>1 Starbucks Birthday Cake Pop into the blender</strong></p>
+                </td>
+            </tr>
+            <!-- Footer -->
+            <tr class="green">
+                <td class="footer">
+                    <a href="#"><img src="https://uploads-ssl.webflow.com/5c29380b1110ec92a203aa84/5c440453e00656a33592694f_Untitled-2.png" alt="" width="200"></a>
+                    <p>Starbucks Newsletter HTML & CSS</p>
+                    <p>2401 Utah Avenue, South Suite 800 Seattle, WA 98134 USA</p>
+                    <p><a href="https://stories.starbucks.com/contact/">customerservice@starbucks.com</a></p>
+                    <p><a href="#">1-800-785-5820</a></p>
+                    <p style="font-size: 13px;"><a href="#">UNSUBSCRIBE</a></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

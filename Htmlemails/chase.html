@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <title>Chase Transactional Email</title>
+    <style>
+     body {
+        margin: 0;
+    }
+    table{
+        border-spacing: 0;
+    }
+    td {
+        padding: 0;
+    }
+    img {
+        border: 0;
+    }
+    .blue {
+        color: #117ACA ;
+    }
+    .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color:#117ACA ;
+    }
+    .main {
+        width: 100%;
+        max-width: 600px;
+        background-color:#ffffff ;
+        font-family: sans-serif;
+        color: #4a4a4a;
+        border-radius: 25px;
+        box-shadow: 0 0 50px rgb(255, 255, 255);
+    }
+    .topborder {
+        background-color: #000000
+    }
+    .two-columns {
+        width: 100%;
+        display: flex;
+        border-bottom: 20px solid #117ACA;
+    }
+    .two-columns .column {
+        width: 100%;
+        max-width:200px;
+    }
+    .two-columns .column2 details {
+        text-align: center;
+        display:flex;
+    }
+    .details a{
+        font-weight: bold;
+        font-family: 'Nunito', sans-serif;
+        text-decoration: none;
+        letter-spacing: 1px;
+        color:#117ACA;
+        padding: 16px;
+    }
+    .title {
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        font-size: 25px;
+        padding: 1%;
+    }
+    .title span {
+        color: rgb(40, 212, 40);
+        font-size: 45px;
+        letter-spacing: 2px;
+    }
+    .breakdowns {
+        border: 1px solid #117ACA;
+        text-align: center;
+        padding: 0px 50px 0px 50px;
+        background-color: #117ACA;
+        color: white;
+    }
+    .breakdowns table {
+        background-color: white;
+        color: black;
+        border-radius: 25px;
+        border: 3px solid rgb(126, 218, 241);
+    }
+    .breakdowns .breakdown {
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+        padding:10px 50px;
+        justify-content: center;
+    }
+    .breakdowns .breakdown h3 {
+        padding: 20px 40px 0px 30px;
+        border-radius: 25px;
+        font-family: 'Nunito', sans-serif;
+    }
+    .breakdowns .breakdown a .icon {
+        padding-top: 15px;
+        padding-left: 90px;
+    }
+    .account {
+        text-align: center;
+        background-color: #117ACA;
+        color: white;
+        padding:20px 50px;
+    }
+    .account table{
+        background-color: white;
+        padding-bottom: 20px;
+        color: black;
+        border-radius: 25px;
+        font-family: 'Nunito', sans-serif;
+        border: 3px solid rgb(126, 218, 241);
+    }
+    .adetails a {
+        text-decoration: none;
+        font-size: 20px;
+        border: 2px solid #117ACA;
+        border-radius: 25px;
+        padding:8px;
+        color: #117ACA;
+        font-weight: bold;
+    }
+
+    .title2 {
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        font-size: 25px;
+        padding: 1%;
+    }
+    .title2 span {
+        color: rgb(40, 212, 40);
+        font-size: 45px;
+        letter-spacing: 2px;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer table {
+        font-family: 'Nunito', sans-serif;
+        background-color: rgb(190, 189, 189);
+        text-align: center;
+        padding: 20px 60px 0px 60px;
+        font-size: 13px;
+    }
+    .botborder {
+        background-color: #000000
+    }
+    @media screen and (max-width:600px) {
+        .wrapper {
+            width: 100% !important;
+            max-width: 300px!important;
+            background-color: #117ACA;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+    <center class="wrapper">
+
+       <table class="main" width="100%">
+<!--border-->
+<tr>
+    <td class=topborder height="25" ></td>
+</tr>
+<!--logo & social media-->
+<tr>
+    <td style="padding: 14px 0px 4px;">
+        <table width="100%">
+
+            <tr>
+                <td class="two-columns">
+
+                    <table class="column">
+                        <tr>
+                            <td style="padding: 0 22px 10px;">
+                                <a href="#"><img src="/Htmlemail-assets/chase-logo.jpg" width="100px" alt="chase" title="chase"></a>
+                            </td>
+                            
+                        </tr>
+                    </table>
+                    <table class="column2">
+                        <tr>
+                            <td class="details">
+                                <a href="#">Log Into Account</a>
+                            </td>
+                            <td class="details">
+                                <a href="#">Change Accounts</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!--title-->
+<tr>
+    <td class="title">
+        <h2>Your scheduled credit card payment was <span>recieved</span> !</h2>
+    </td>
+</tr>
+
+<!--payment breakdown-->
+<tr>
+    <td class="breakdowns">
+        <table width="100%">
+            
+            <tr>
+                <h2>Payment Breakdown:</h2>
+                <td class="breakdown">
+                    <h3>Chase Freedom Unlimited (...6789)</h3>
+                    <a href="#"><img class="icon" src="/Htmlemail-assets/phone.png" width="100px" alt="clock"></a>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="breakdown">
+                    <h3>Scheduled Date: November 15th 2022 </h3>
+                    <a href="#"><img class="icon" src="/Htmlemail-assets/calender.png" alt="calender" width="100px"></a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="breakdown">
+                    <h3>Total Summary: $322.45</h3>
+                    <a href="#"><img class="icon" src="/Htmlemail-assets/checkmark.141dcb7f.png" width="100px" alt="clock"></a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!--Account...-->
+<tr>
+    <td class="account">
+        <table   width="100%">
+
+            <tr>
+                <h2>Account Details:</h2>
+                <td class="adetails" >
+                    <h2>See your Credit Spending Patterns</h2>
+                    <a href="#" class="btn">See Spending Patterns</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="adetails">
+                    <h2>Go Paperless !</h2>
+                    <a href="#" class="btn">Request Digital Reciepts</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="adetails">
+                    <h2>Learn better credit practices </h2>
+                    <a href="#" class="btn">Learn More</a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!--Banner 2-->
+<tr>
+    <td class="title2">
+        <h2>Dont forget About Your Rewards<span> 20,451 points</span> !</h2>
+    </td>
+</tr>
+<!--footer-->
+<tr>
+    <td class="footer">
+        <table width="100%">
+            <tr>
+                <td class="fdetails">
+                    <h2>Chase Bank Mobile Banking Policy</h2>
+                    <p>Chase Mobile® app is available for select mobile devices. Message and data rates may apply.</p>
+                    <pThis service email gives you updates and information about your Chase relationship.</p>
+                    <p>Chase cannot guarantee the delivery of alerts and notifications. Wireless or internet service provider outages or other circumstances could delay them. You can always check chase.com or the Chase Mobile app for the status of your accounts including your latest account balances and transaction details.</p>
+                    <p>To protect your personal information, please don't reply to this message. Chase won't ask for confidential information in an email.</p>
+                    <p>If you have concerns about the authenticity of this message or have questions about your account visit chase.com/CustomerService for ways to contact us.</p>
+                    <p>Your privacy is important to us. See our online Security Center to learn how to protect your information.</p>
+                    <h3>HTML & CSS Transactional Email</h3>
+                    <p>JPMorgan Chase Bank, N.A. Member FDIC</p>
+                    <p>© 2022 JPMorgan Chase & Co.</p>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!--border-->
+<tr>
+    <td class=botborder height="25" ></td>
+</tr>
+       </table>
+    </center>
+</body>
+</html>

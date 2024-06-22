@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9; /* Off-white background */
+    color: #333;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #bc5090;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #2980b9; /* Rich green */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #1abc9c; /* Complementary light green */
+    color: #fff;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #003f5c; /* Dark navy blue */
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20vw; /* Use relative units */
+    height: 20vw; /* Use relative units */
+    background-color: #8f89e7; /* Light blue hue */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: bounce 3s infinite; /* Add the animation */
+}
+
+/* Keyframes for the bouncing animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -52%) scale(1.05);
+    }
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content img {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    margin-bottom: 50px;
+}
+
+.hero-buttons .btn {
+    padding: 15px 30px;
+    background-color: #ff6f91; /* Darker pink */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #d7263d; /* Darker pink for hover */
+    color: #ffffff;
+}
+
+.hero-footer {
+    padding: 20px 0;
+    background-color: #003f5c; /* Dark navy blue */
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-footer p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.info-section {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.768), rgba(255, 255, 255, 0.86)), url('pexels-sebastian-411207.jpg') center/cover no-repeat;
+}
+
+.info-header {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.info-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    padding-bottom: 10rem;
+}
+
+.info-item {
+    border-top: 2px solid #003f5c;
+    padding-top: 1rem;
+}
+
+.info-item.tall-item {
+    grid-row: span 2;
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+.info-item a {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #666;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.info-item a:hover {
+    transform: translateY(-4px);
+    color: #ff6f91;
+}
+
+.info-section-footer {
+    padding: 20px 0;
+    background-color: #bc5090;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.info-section-footer p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.work-section {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.768), rgba(255, 255, 255, 0.86)), url('pexels-hngstrm-1939485.jpg') center/cover no-repeat;
+}
+
+.work-header {
+    text-align: right;
+    margin-bottom: 3rem;
+}
+
+.work-header h1 {
+    font-size: 2.5rem;
+    text-align: right;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.work-grid {
+    display: grid;
+    padding-bottom: 10rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.work-item {
+    border-top: 2px solid #003f5c;
+    padding-top: 1rem;
+}
+
+.work-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.work-item p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+.work-section-footer {
+    padding: 20px 0;
+    background-color: #003f5c; /* Dark navy blue */
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.work-section-footer p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Project Grid styles */
+.projects-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-item {
+    background-color: #8ff1df7a; /* Pastel blue for buttons */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.project-item h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.project-item a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ff6f91; /* Darker pink */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-item a:hover {
+    background-color: #d7263d; /* Darker pink for hover */
+    transform: translateY(-2px);
+}
+
+.project-section-footer {
+    background-color: #bc5090;
+    color:#fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.project-section-footer p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #27AE60;
+    outline: none;
+}
+
+.contact-form .btn-submit {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #bc5090;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #e560e7;
+}
+
+.project-section-footer {
+    background-color: #bc5090;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contact-icon {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased gap for better spacing */
+}
+
+.contact-icon a {
+    color: #ffffff;
+    font-size: 2rem; /* Increased icon size */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.contact-icon a:hover {
+    transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section::before {
+        width: 60vw; /* Increase size on smaller screens */
+        height: 60vw; /* Increase size on smaller screens */
+        top: 40%; /* Adjust position */
+    }
+
+    .nav-links a {
+        padding: 10px 20px; /* Reduce padding */
+        font-size: 0.875rem; /* Reduce font size */
+    }
+
+    .hero-buttons .btn {
+        padding: 10px 20px; /* Reduce padding */
+        font-size: 1rem; /* Adjust font size */
+    }
+    .hero-content h1 {
+        font-size: 3rem; /* Adjust font size */
+    }
+
+    .hero-content p {
+        font-size: 1.25rem; /* Adjust font size */
+    }
+
+    .hero-buttons .btn {
+        padding: 5px 10px;
+        margin: 0 5px; 
+        font-size: .5rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-icon {
+        gap: 20px;
+    }
+}
+@media (max-width: 375px) {
+    .hero-section::before {
+        width: 30vw; /* Further increase size */
+        height: 30vw; /* Further increase size */
+        top: 35%; /* Adjust position */
+    }
+
+    .nav-links a {
+        padding: 5px 10px;
+        font-size: .5rem;
+    }
+
+    .hero-buttons .btn {
+        padding: 5px 10px;
+        font-size: .5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Further adjust font size */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Further adjust font size */
+    }
+    .hero-footer p, .info-section-footer p , .project-section-footer p , .work-section-footer p {
+    font-size: 1rem;
+    }
+}
