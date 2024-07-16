@@ -519,7 +519,7 @@ nav {
     }
 
     .hero-content p {
-        font-size: 1rem; /* Further adjust font size */
+        font-size: .75rem; /* Further adjust font size */
     }
     .hero-footer p, .info-section-footer p , .project-section-footer p , .work-section-footer p {
     font-size: 1rem;
