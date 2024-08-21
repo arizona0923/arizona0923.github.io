@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles\style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&family=Neuton:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>HG Private Chef</title>
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="assets\HGlogo.png" class="logo" alt="logo">
+                <span class="material-symbols-outlined icon-in" onclick="openmenu()">menu</span>
+                <ul id="sidemenu">
+                   
+                    
+                    <li><a href="#about">My Story</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#menu">The Menu</a></li>
+                    <li><a href="#contact">Reserve</a></li>
+                    <span class="material-symbols-outlined icon-in" onclick="closemenu()">close</span>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1><span>Humberto Gonzales </span></h1>
+                <p>Culianry Expert & Private Chef</p>
+            </div>
+        </div>
+    </section>
+    <!--about-->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets\headshot.jpg" alt="pictutre">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">My story and Experience</h1>
+                    <p>
+                        My mission Statement:<br>
+                        "As a private chef, my mission is to provide personalized, high-quality culinary experiences for my clients. I strive to create memorable meals that cater to each individual's unique tastes and dietary needs, using fresh, locally-sourced ingredients whenever possible. I am dedicated to delivering exceptional service and exceeding my clients' expectations every time they dine with me."  
+                    </p>    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Palete expertise</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('recognition')">Recognitions</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Mexican speaciliaties:</span> Tortas Hogadas, Carne en su Jugo, Tamales, Horcahta</li>
+                            <li><span>Indian speaciliaties:</span> Chicken Tikka Masala, Buttered chicken, Samosas</li>
+                            <li><span>Thai speaciliaties:</span> Massamman Curry (coconut milk based curry + potatoes and beef)</li>
+                            <li><span>Korean speaciliaties:</span> Japchae (glass noodles, vegetables and meat), Tteokbokki (spicy rice cakes)</li>
+                            <li><span>Japanese speaciliaties:</span> Tonkatsu, Sushi, Ramen</li>
+                            <li><span>Middle Eastern speaciliaties:</span> Mujadara (lentils, rice and carmelized onions</li>
+                            <li><span>African speaciliaties:</span> Jollof Rice, Suya (grilled meat skewers)</li>
+                            <li><span>French speaciliaties:</span> Coq au vine, Ratatouille, Bouillabaisse</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2020-2022</span> Boka ( Michelin Star 2011-2022): Chef </li>
+                            <li><span>2019-2020</span> Private Event (2 person anniversary) </li>
+                            <li><span>2019-2020</span> Social Appetizer Event (5 person dinner) </li>
+                            <li><span>2020-2021</span> Avec: Chef</li>
+                            <li><span>2017-2018</span> Oran Mor Bistro: Chef </li>
+                            <li><span>2017-2018</span> Private Buissness Event (3 person dinner) </li>
+                            <li><span>2016-2017</span> Bills Pub: Cook </li>
+                            <li><span>2016-2018</span> Kendall Culinary School </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="recognition">
+                        <ul>
+                            <li><span>2022</span> Boka Culinary Competition: 2-time winner </li>
+                            <li><span>2021-2022</span> Experience Working with 2 Michelen star chefs (Boka and Avec) </li>
+                            <li><span>2021</span> YCCA Award recipent</li>
+                            <li><span>2018</span> Kendall College University: Culinary Degree</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--services-->
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <span class="material-symbols-outlined">cooking</span>
+                    <h2>$200: 2 entrees + sides (Ideal for 1-2 people)</h2>
+                    <p>
+                        this package is perfect for an anniversary between two people or a pair needing an elevated experience.
+                         Includes: Entrees, sides, a small desert, a menu, and a complimentary bottle of champagne
+                    </p>
+                    <a href="#contact">learn more</a>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">tapas</span>
+                    <h2>$250-300: 3 entrees + sides (Ideal for 3-4 people)</h2>
+                    <p>
+                        this package was made with friends and family in mind. allowing everyone to share and engage in a culinary experience.
+                         Includes: Appetizers, Entrees, sides, a menu, and and a complimentary bottle of champagne
+                    </p>
+                    <a href="#contact">learn more</a>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">dinner_dining</span>
+                    <h2>$330(+) : 4 entrees + sides (Ideal for 4-5 people)</h2>
+                    <p>
+                        this package is capped at 6-7 people. This package requires further communication to make sure your party has one of the most delicious nights ever!
+                        Includes: Special Menu that is appropiate for a larger parties
+                    </p>
+                    <a href="#contact">learn more</a>
+                </div>
+             </div>
+        </div>
+    </section>
+    <!--menus and pallete-->
+    <section id="menu">
+        <div class="conatiner">
+            <div class="menu-content">
+                <h1 class="sub-title">Past menus & current flavor profile</h1>
+                <p> We work together to get you exactly what you want with the correct flavor profile. You are not limited to these dishes, as you may do special requests and other palletes. When you book we'll send out a complete ingredient list</p>
+                <div class="menus">
+                    <div class="plate">
+                        <img src="assets\pexels-photo-5639896.jpg">
+                        <div class="layer">
+                            <h3>Pasta y Bolognese</h3>
+                            <p>Meat-based sauce made with ground beef, tomatoes, onions, and various herbs and spices.</p>
+                        </div>
+                    </div>
+                    <div class="plate">
+                        <img src="assets\pexels-photo-10165859.jpg">
+                        <div class="layer">
+                            <h3>Creamy Alfredo, Parmesan and Chicken</h3>
+                            <p>made with fettuccine pasta, grilled or sautéed chicken, and a sauce made from heavy cream, parmesan cheese, and garlic.</p>
+                        </div>
+                    </div>
+                    <div class="plate">
+                        <img src="assets\pexels-photo-3779791.jpg">
+                        <div class="layer">
+                            <h3>Burrata with Balsamic Drizzled Baked Bread</h3>
+                            <p>Served with burrata chunks, brushetta, diced tomatoes, diced onions, and chopped basil.</p>
+                        </div>
+                    </div>
+                    <div class="plate">
+                        <img src="assets\pexels-photo-13772598.jpg">
+                        <div class="layer">
+                            <h3>Steak Diane</h3>
+                            <p>pan-fried steak with a creamy mushroom sauce</p>
+                        </div>
+                    </div>
+                    <div class="plate">
+                        <img src="assets\dsih2.webp">
+                        <div class="layer">
+                            <h3>Buttered Chicken</h3>
+                            <p>Flavored with a blend of aromatic spices, such as cumin, garam masala, and coriander, and often includes butter and cream.</p>
+                        </div>
+                    </div>
+                    <div class="plate">
+                        <img src="assets\pexels-photo-10296258.jpg">
+                        <div class="layer">
+                            <h3>8oz Mini Steak</h3>
+                            <p>Cooked to preference, served with aspargus or seasonal vegetables.</p>
+                        </div>
+                    </div>
+                    <div class="plate">
+                        <img src="assets\pexels-photo-699953.jpg">
+                        <div class="layer">
+                            <h3>Spicy Shrimp Soup (Tom Yum Goong)</h3>
+                            <p>Flavorful and aromatic soup made with shrimp, lemongrass, kaffir lime leaves, galangal, and chili peppers. </p>
+                        </div>
+                    </div>
+                    <div class="plate">
+                        <img src="assets\pexels-photo-6046491.jpg">
+                        <div class="layer">
+                            <h3>Sesame Ahi Tartare</h3>
+                            <p>made with raw ahi tuna that has been finely diced and mixed with various ingredients. Typically served with crackers or on a crust</p>
+                        </div>
+                    </div>
+
+                    <div class="plate">
+                        <img src="assets\pexels-photo-9616720.jpg">
+                        <div class="layer">
+                            <h3>Carne en su Jugo with Black Sausage</h3>
+                            <p>traditional Mexican dish made with beef, beans, and bacon. Hearty soup that is typically served with a side of tortillas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--contact-->
+    <section id="contact">
+        <div class="container">
+            <h1 class="sub-title">Reserve your date!</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <p>My team is dedicated to 100% communication to give you the culinary experience where you and your event will absolutely droll over! <br></br>
+                    Complete this form and well reach out! We will review the order, ask/answers any questions, go over pricing, and make sure your dishes are as delicious as ever! 
+                    </p>
+                    <div class="steak-img">
+                        <img src="assets\pexels-photo-323682.jpg" alt="pictutre">
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form action="https://formspree.io/f/xnqyqnnr"
+                    method="POST"
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="number" name="Number" placeholder="Phone Number" required>
+                        <input type="text" name="Dateofevent" placeholder="Date of the Event" required>
+                        <input type="text" name="Typeofevent" placeholder="Type of Event" required>
+                        <input type="number" name="Numberofpeople" placeholder="Number of people eating" required>
+                        <textarea name="Message" id=""rows="10" placeholder="Flavor Profile/Requested Dishes/Types of Dishes"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+
+                    </form>
+                </div>
+            </div>   
+        </div>
+    </section>
+    <!--customer review-->
+    <section id="review">
+        <div class="container">
+            <h1 class="sub-title">Previous dinners</h1>
+            <div class="review-list">
+                <div>
+                    <span class="material-symbols-outlined">favorite</span>
+                    <h2>Christian + Emma 10/17/2022</h2>
+                    <p>
+                        "We celebrated our 4 year anniversary with Humberto as our private chef! The food was Ridiculously good and overall would definetly book again for our next anniversary!"
+                    </p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined"> diversity_1</span>
+                    <h2>Carlos + party of 4 12/20/2022</h2>
+                    <p>
+                        "this package was perfect! We even had leftovers, the food, laughter and chatter seemed so insync that the event couldnt have been possible without Humbertos culinary expertise! Thank you again the experience of a personal chef for you event is a must!"
+"
+                </div>
+                <div>
+                    <span class="material-symbols-outlined"> school</span>
+                    <h2>Hershal + friends<br> 5/28/2022</h2>
+                    <p>
+                        We wanted to celebrate our recent graduation in a more unique way and humberto made our pallete Unique and the menu so appetizing. He made us feel special and even gave us a free bottle of champagne to celebrate our gradution!
+                    </p>
+                </div>
+             </div>
+        </div>
+    </section>
+    <!--footer-->
+    <footer>
+        <p>Humberto Gonzalez Culinary Expert and private chef @2023</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
