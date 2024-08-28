@@ -101,6 +101,7 @@ a:hover {
     margin: 0;
     position: relative;
     overflow: hidden;
+    min-height: 300px;
 }
 
 /* Center the hero content within the hero section */
@@ -511,11 +512,20 @@ a:hover {
 }
  
 /* Media Queries for Mobile Responsivenes */
-
+@media (max-width: 480px) {
+    .hero-section {
+        background-position: center top;
+        background-size: cover;
+    }
+}
 /* Ensuring proper display on mobile devices */
 @media (max-width: 768px) {
 
     /* Hero Section */
+    .hero-section {
+        background-size: cover; /* Adjust background size to 'contain' for smaller screens */
+        background-position: center top; /* Position the image at the top */
+    }
     .hero-content h1 {
         font-size: 40px; /* Reduce the font size for better fit on smaller screens */
     }
@@ -606,5 +616,10 @@ a:hover {
     /* Contact Section */
     .contact-form {
         padding: 0 10px; /* Add padding to ensure form fits within mobile screens */
+    }
+}
+@media (max-width: 1200px) {
+    .hero-section {
+        background-position: center top; /* Keep the image more visible at the top */
     }
 }
