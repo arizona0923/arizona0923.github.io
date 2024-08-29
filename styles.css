@@ -109,7 +109,7 @@ a:hover {
 .hero-content {
     max-width: 100%; /* Allow the content to expand across the viewport */
     padding: 20px;
-    margin-top:15%;
+    margin-top:12%;
     box-sizing: border-box;
     text-align: center;
     justify-content: center;
@@ -552,7 +552,7 @@ a:hover {
     /* Hero Section */
     .hero-section {
         background-image: none;
-        height:80vh;
+        height:60vh;
     }
     .hero-content h1 {
         font-size: 3rem; /* Reduce the font size for better fit on smaller screens */
