@@ -308,50 +308,94 @@ a:hover {
     color: #666;
 }
 
-/* Work Section */
+/* Work Section General Styles */
+#work-section {
+    padding: 5% 5%; /* Added padding to ensure content covers 90% of the screen */
+}
+
+/* Work Category Row to Group Client Work and Landing Pages */
+.work-category-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for Client Work and Landing Pages */
+    gap: 20px; /* Space between the two columns */
+}
+
+/* Work Grid for Client Work and Landing Pages */
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: 1fr 1fr; /* Two work items per row */
+    gap: 20px;
+    align-items: stretch; /* Ensure all items have equal height */
 }
 
+/* Work Grid for HTML Emails (5 columns) */
+.emails-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five work items per row */
+    gap: 20px; /* Space between the items */
+    align-items: stretch; /* Ensure all items have equal height */
+}
+
+/* Category Titles */
+.project-category h3 {
+    font-size: 28px;
+    color: #333;
+    text-align: center; /* Centering titles */
+    margin-bottom: 20px;
+}
+
+/* Work Item Styling */
 .work-item {
     background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    padding: 25px;
+    border-radius: 20px; /* Ensure the container also has the same border-radius */
+    overflow: hidden; /* Clip any overflowed image part */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-item a {
-    display: block;
-    border-radius: 10px;
-    overflow: hidden; /* Ensures the image's border radius is maintained */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%; /* Ensure all items stretch to the same height */
+    box-sizing: border-box;
 }
 
 .work-item img {
     width: 100%;
-    height: 350px; /* Set a fixed height for all images */
-    object-fit: cover; /* Ensures the images fill the container while maintaining aspect ratio */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    max-height: 200px; /* Limit the image height */
+    object-fit: scale-down; /* Ensure images fill the space proportionately */
+    border-radius: 20px; /* Ensure the image has rounded corners */
+    margin-bottom: 15px;
+    flex-shrink: 0; /* Prevent the image from shrinking */
 }
 
-.work-item img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+
+.work-item h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    flex-grow: 0;
 }
 
-.work-item h3 {
-    margin-top: 15px;
-    font-size: 24px;
+.work-details {
+    flex-grow: 1; /* Allow text content to grow and fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .work-details p {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.6;
     color: #666;
-    margin: 10px 0; /* Add spacing between the pieces of text */
+    margin: 5px 0;
 }
+
+/* Hover Effects */
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Passion Projects Section */
 .title {
@@ -613,12 +657,14 @@ a:hover {
     }
 
     /* Work Section */
-    .work-grid {
-        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    .work-category-row {
+        grid-template-columns: 1fr; /* Stack categories vertically on smaller screens */
     }
-
+    .work-grid, .emails-grid {
+        grid-template-columns: 1fr; /* Single column layout for work items */
+    }
     .work-item img {
-        height: auto; /* Adjust height to ensure images are responsive */
+        max-height: 150px; /* Maintain image height for smaller screens */
     }
 
     /* Passion Projects Section */
