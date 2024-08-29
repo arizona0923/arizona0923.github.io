@@ -362,7 +362,7 @@ a:hover {
 .work-item img {
     width: 100%;
     max-height: 200px; /* Limit the image height */
-    object-fit: scale-down; /* Ensure images fill the space proportionately */
+    object-fit: contain; /* Ensure images fill the space proportionately */
     border-radius: 20px; /* Ensure the image has rounded corners */
     margin-bottom: 15px;
     flex-shrink: 0; /* Prevent the image from shrinking */
