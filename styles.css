@@ -396,54 +396,55 @@ a:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Passion Projects Section */
+#passion-projects-section {
+    padding: 5% 5%; /* Ensure content covers 90% of the screen */
+}
+
 .title {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .title-image {
-    max-width: 100%; /* Adjust the size as needed */
+    max-width: 100%;
     height: 300px;
-    border-radius: 10%;
-    margin-right: 20px; /* Space between the image and the paragraph */
+    border-radius: 20px; /* Updated border-radius to match other sections */
+    margin-right: 20px;
 }
 
 .title p {
     font-size: 20px;
-    width: 80%;
-    line-height: 2;
+    line-height: 1.6;
     color: #555;
     margin: 0;
     flex-grow: 1;
-    text-align: left;
 }
 
 .social-proof-icons {
-    margin-top: 10px; /* Space above the icons */
+    margin-top: 10px;
     text-align: left;
 }
 
 .social-proof-icons i {
     font-size: 40px;
     color: #5a4848;
-    margin-right: 15px; /* Space between icons */
+    margin-right: 15px;
     transition: color 0.3s ease;
 }
 
 .social-proof-icons a i {
-    font-size: 50px; /* Make the icon bigger */
-    color: #ff0000; /* YouTube red color */
+    font-size: 50px;
+    color: #ff0000;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-proof-icons a i:hover {
-    color: #ff6666; /* Slightly lighter red on hover */
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    color: #ff6666;
+    transform: scale(1.1);
 }
-
 
 .projects-grid {
     display: grid;
@@ -453,42 +454,52 @@ a:hover {
 }
 
 .project-item {
-    background-color: #fff;
+    background-color: #f4f4f4; /* Updated to match other sections */
     padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Updated border-radius to match other sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for consistency */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    text-align: left;
+    text-align: center; /* Center text for consistency */
+    height: 100%; /* Ensure all items stretch to the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-item img {
     width: 100%;
-    height: 400px;
-    border-radius: 10%;
-    margin-bottom: 20px;
+    max-height: 200px; /* Adjusted height to fit within the layout */
+    object-fit: cover; /* Maintain aspect ratio and fit image within the space */
+    border-radius: 20px; /* Updated border-radius to match other sections */
+    margin-bottom: 15px;
+    flex-shrink: 0;
 }
 
 .project-item h3 {
-    font-size: 24px;
-    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .project-item ul {
     margin: 10px 0;
     padding-left: 20px;
     list-style-type: disc;
+    text-align: left;
 }
 
 .project-item li {
     margin-bottom: 10px;
     font-size: 16px;
+    color: #666;
 }
 
 .project-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Contact Section */
 .contact-form {
