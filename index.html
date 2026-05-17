@@ -2418,12 +2418,12 @@
   }
   .fwin{
     position: absolute;
-    background: #1f1f22;
+    background: #ffffff;
     border-radius: 11px;
     box-shadow:
-      0 0 0 1px rgba(255,255,255,.06),
-      0 12px 32px rgba(0,0,0,.50),
-      0 40px 80px rgba(0,0,0,.40);
+      0 0 0 1px rgba(0,0,0,.10),
+      0 12px 32px rgba(0,0,0,.30),
+      0 40px 80px rgba(0,0,0,.22);
     overflow: hidden;
     pointer-events: auto;
     display: flex; flex-direction: column;
@@ -2444,8 +2444,8 @@
   .fwin-bar{
     display: flex; align-items: center;
     padding: 10px 14px;
-    background: linear-gradient(180deg, #2c2c2f 0%, #232325 100%);
-    border-bottom: 1px solid rgba(255,255,255,.05);
+    background: linear-gradient(180deg, #f0f0f2 0%, #e2e2e4 100%);
+    border-bottom: 1px solid rgba(0,0,0,.10);
     gap: 14px;
     cursor: grab;
     user-select: none;
@@ -2459,7 +2459,7 @@
   .fwin-bar .dot.g{ background: #28c840; }
   .fwin-bar .crumbs{
     display: inline-flex; align-items: center; gap: 6px;
-    color: #fff; font-family: -apple-system, sans-serif;
+    color: #1d1d1f; font-family: -apple-system, sans-serif;
     font-size: 13px; font-weight: 600;
   }
   .fwin-bar .crumb-icon{
@@ -2479,12 +2479,12 @@
   /* Body — tile grid of items */
   .fwin-body{
     padding: 18px 20px 22px;
-    background: #1f1f22;
+    background: #ffffff;
     overflow-y: auto;
     max-height: 410px;
   }
   .fwin-body .fwin-title{
-    color: rgba(255,255,255,.55);
+    color: #6e6e73;
     font-family: -apple-system, sans-serif;
     font-size: 11px; font-weight: 600;
     letter-spacing: .4px; text-transform: uppercase;
@@ -2507,13 +2507,13 @@
     background: none; border: 0;
     text-align: center;
   }
-  .fwin-item:hover{ background: rgba(255,255,255,.06); transform: translateY(-1px); }
-  .fwin-item:focus-visible{ outline: 2px solid rgba(120,180,255,.6); outline-offset: 2px; }
+  .fwin-item:hover{ background: rgba(0,122,255,.10); transform: translateY(-1px); }
+  .fwin-item:focus-visible{ outline: 2px solid rgba(0,122,255,.55); outline-offset: 2px; }
   /* Folder icon (sub-folder) */
   .fwin-item.is-folder .fi-ico{
     width: 60px; height: 46px;
     position: relative;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,.35));
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,.18));
   }
   .fwin-item.is-folder .fi-ico::before{
     content: ""; position: absolute;
@@ -2547,29 +2547,28 @@
     width: 80px; height: 50px;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,.35);
-    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 1px 3px rgba(0,0,0,.18);
+    border: 1px solid rgba(0,0,0,.10);
   }
   /* Item name */
   .fwin-item .fi-name{
     font-family: -apple-system, "SF Pro Display", "Inter Tight", sans-serif;
     font-size: 11.5px;
-    color: #fff;
+    color: #1d1d1f;
     line-height: 1.25;
     font-weight: 500;
-    text-shadow: 0 1px 2px rgba(0,0,0,.5);
     max-width: 100px;
   }
   .fwin-item .fi-meta{
     font-family: -apple-system, sans-serif;
     font-size: 9.5px;
-    color: rgba(255,255,255,.55);
+    color: #6e6e73;
   }
   .fwin-item .fi-stamp{
     font-family: -apple-system, sans-serif;
     font-size: 8.5px;
-    background: rgba(46,135,75,.20);
-    color: #5dd692;
+    background: rgba(40,167,69,.14);
+    color: #1d7a3a;
     padding: 1px 5px;
     border-radius: 100px;
     margin-top: 1px;
@@ -2577,14 +2576,14 @@
     font-weight: 600;
   }
   .fwin-item .fi-stamp.in-progress{
-    background: rgba(233,189,68,.18); color: #f5d442;
+    background: rgba(217,119,6,.14); color: #92510a;
   }
 
   /* Empty state for folder with no items */
   .fwin-empty{
     grid-column: 1 / -1;
     text-align: center;
-    color: rgba(255,255,255,.35);
+    color: #86868b;
     font-family: -apple-system, sans-serif;
     font-size: 12px;
     padding: 30px 0;
