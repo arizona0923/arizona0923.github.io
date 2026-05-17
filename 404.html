@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>404 — File not found · Adriel Arizona</title>
+<meta name="description" content="The file you're looking for doesn't exist (yet)." />
+<meta name="theme-color" content="#ede8dc" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a66c2'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='42' font-weight='700' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter+Tight:ital,wght@0,400..700;1,400..600&family=JetBrains+Mono:wght@400;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg: #ede8dc;
+    --ink: #1a1813;
+    --ink-soft: #5a5346;
+    --ink-faint: #9b9485;
+    --accent-pink: #ff2e7e;
+  }
+  html[data-theme="dark"]{
+    --bg: #1a1813;
+    --ink: #f0ece2;
+    --ink-soft: #b8b2a3;
+    --ink-faint: #6a655a;
+  }
+
+  *{ box-sizing: border-box; }
+  html, body{
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter Tight", -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background .3s, color .3s;
+  }
+  body{
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    /* faint dot grid background */
+    background-image: radial-gradient(rgba(0,0,0,.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: 0 0;
+    overflow: hidden;
+  }
+  html[data-theme="dark"] body{
+    background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  }
+
+  /* Top nav — minimal, just brand + back */
+  nav{
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 32px;
+    z-index: 10;
+  }
+  nav .brand{
+    font-family: "Caveat", cursive;
+    font-size: 28px; font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    transition: transform .25s cubic-bezier(.34,1.5,.64,1), color .2s;
+    display: inline-block;
+  }
+  nav .brand:hover{
+    transform: rotate(-3deg) translateY(-1px);
+    color: var(--accent-pink);
+  }
+  nav .back-home{
+    font-family: "Inter Tight", sans-serif;
+    font-size: 13px; font-weight: 500;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color .2s, transform .2s;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  nav .back-home:hover{
+    color: var(--ink);
+    transform: translateX(-2px);
+  }
+  nav .back-home::before{ content: "←"; }
+
+  /* Main stage — Finder window centered on the page */
+  main{
+    flex: 1;
+    display: grid; place-items: center;
+    padding: 24px;
+    position: relative;
+  }
+
+  /* The "broken" Finder window */
+  .lost-window{
+    background: #1f1f22;
+    border-radius: 12px;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,.06),
+      0 12px 32px rgba(0,0,0,.30),
+      0 40px 80px rgba(0,0,0,.20);
+    overflow: hidden;
+    width: 540px;
+    max-width: 100%;
+    animation: lost-in 0.6s cubic-bezier(.34,1.4,.64,1) both;
+  }
+  @keyframes lost-in{
+    from{ opacity: 0; transform: scale(.92) translateY(20px); }
+    to{ opacity: 1; transform: none; }
+  }
+
+  .lost-window .bar{
+    display: flex; align-items: center;
+    padding: 12px 16px;
+    background: linear-gradient(180deg, #2c2c2f 0%, #232325 100%);
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    gap: 14px;
+  }
+  .bar .dots{ display: flex; gap: 8px; }
+  .bar .dot{ width: 12px; height: 12px; border-radius: 50%; }
+  .bar .dot.r{ background: #ff5f57; }
+  .bar .dot.y{ background: #febc2e; }
+  .bar .dot.g{ background: #28c840; }
+  .bar .crumbs{
+    color: rgba(255,255,255,.65);
+    font-family: -apple-system, sans-serif;
+    font-size: 13px; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .bar .crumbs::before{
+    content: ""; display: inline-block;
+    width: 14px; height: 11px;
+    background: linear-gradient(180deg, #8cc0f0, #5a96d6);
+    border-radius: 2px;
+    position: relative;
+  }
+
+  /* Window body */
+  .lost-body{
+    padding: 56px 40px 48px;
+    text-align: center;
+    color: #fff;
+  }
+  .lost-icon{
+    font-size: 64px;
+    margin-bottom: 18px;
+    display: inline-block;
+    animation: lost-bob 3s ease-in-out infinite;
+  }
+  @keyframes lost-bob{
+    0%, 100%{ transform: translateY(0) rotate(-4deg); }
+    50%{ transform: translateY(-6px) rotate(4deg); }
+  }
+  .lost-title{
+    font-family: "Inter Tight", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+  }
+  .lost-code{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,.45);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .lost-msg{
+    font-family: "Inter Tight", sans-serif;
+    font-size: 15px;
+    color: rgba(255,255,255,.70);
+    line-height: 1.55;
+    max-width: 380px;
+    margin: 0 auto 28px;
+  }
+  .lost-msg b{ color: #fff; font-weight: 600; }
+
+  /* Terminal-style command suggestion */
+  .lost-cmd{
+    background: #0e0e10;
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 auto 28px;
+    max-width: 380px;
+    text-align: left;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    color: rgba(255,255,255,.85);
+    line-height: 1.6;
+  }
+  .lost-cmd .p{ color: #1ed760; margin-right: 6px; }
+  .lost-cmd .c{ color: #f0c674; }
+  .lost-cmd .out{ color: rgba(255,255,255,.6); }
+  .lost-cmd .cursor{
+    display: inline-block;
+    width: 8px; height: 14px;
+    background: rgba(255,255,255,.85);
+    margin-left: 2px;
+    vertical-align: -2px;
+    animation: blink 1.1s step-end infinite;
+  }
+  @keyframes blink{ 50%{ opacity: 0; } }
+
+  /* CTA buttons */
+  .lost-actions{
+    display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+  }
+  .lost-actions a{
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform .2s, background .2s, color .2s;
+  }
+  .lost-actions .primary{
+    background: #fff;
+    color: #1a1a1a;
+  }
+  .lost-actions .primary:hover{
+    transform: translateY(-1px);
+    background: #f0c674;
+  }
+  .lost-actions .secondary{
+    background: transparent;
+    color: rgba(255,255,255,.85);
+    border: 1px solid rgba(255,255,255,.18);
+  }
+  .lost-actions .secondary:hover{
+    transform: translateY(-1px);
+    background: rgba(255,255,255,.08);
+    color: #fff;
+  }
+
+  /* Footer signature */
+  .lost-foot{
+    text-align: center;
+    color: var(--ink-faint);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 28px 24px 36px;
+  }
+  .lost-foot a{
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .lost-foot a:hover{ color: var(--accent-pink); }
+
+  /* Floating debris — papers / sticky notes scattered in the bg */
+  .debris{
+    position: absolute;
+    pointer-events: none;
+    opacity: .55;
+    filter: blur(.3px);
+  }
+  .debris.sticky{
+    width: 120px; height: 110px;
+    background: #fcd962;
+    box-shadow: 0 6px 14px rgba(0,0,0,.10), 0 1px 2px rgba(0,0,0,.05);
+    transform: rotate(-8deg);
+    top: 20%; left: 8%;
+    font-family: "Caveat", cursive;
+    font-size: 18px;
+    padding: 14px;
+    color: #5a3a00;
+    line-height: 1.2;
+  }
+  .debris.sticky::before{
+    content: "Did you mean…";
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .debris.paper{
+    width: 100px; height: 130px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.10);
+    transform: rotate(7deg);
+    bottom: 14%; right: 10%;
+    background-image:
+      linear-gradient(180deg, transparent 16px, rgba(0,0,0,.06) 16px, rgba(0,0,0,.06) 17px, transparent 17px),
+      linear-gradient(180deg, transparent 32px, rgba(0,0,0,.06) 32px, rgba(0,0,0,.06) 33px, transparent 33px),
+      linear-gradient(180deg, transparent 48px, rgba(0,0,0,.06) 48px, rgba(0,0,0,.06) 49px, transparent 49px),
+      linear-gradient(180deg, transparent 64px, rgba(0,0,0,.06) 64px, rgba(0,0,0,.06) 65px, transparent 65px),
+      linear-gradient(180deg, transparent 80px, rgba(0,0,0,.06) 80px, rgba(0,0,0,.06) 81px, transparent 81px);
+  }
+  .debris.paperclip{
+    width: 24px; height: 70px;
+    bottom: 22%; left: 14%;
+    transform: rotate(-30deg);
+  }
+  .debris.paperclip::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #888;
+    border-radius: 12px / 35%;
+    border-bottom: 3px solid transparent;
+  }
+
+  html[data-theme="dark"] .debris{ opacity: .25; }
+  html[data-theme="dark"] .debris.paper{ background: #2a2620; }
+  html[data-theme="dark"] .debris.sticky{ background: #5a4a18; color: #f5d76e; }
+
+  /* Mobile */
+  @media (max-width: 640px){
+    .debris{ display: none; }
+    .lost-window{ width: 100%; }
+    .lost-body{ padding: 36px 24px 32px; }
+    .lost-title{ font-size: 26px; }
+    .lost-icon{ font-size: 48px; }
+    nav{ padding: 18px 20px; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Floating debris in the background -->
+<div class="debris sticky">but it's not here.</div>
+<div class="debris paper" aria-hidden="true"></div>
+<div class="debris paperclip" aria-hidden="true"></div>
+
+<!-- Top nav -->
+<nav>
+  <a href="/" class="brand">Adriel</a>
+  <a href="/" class="back-home">Back home</a>
+</nav>
+
+<!-- Main 404 stage -->
+<main>
+  <div class="lost-window">
+    <div class="bar">
+      <div class="dots">
+        <span class="dot r"></span>
+        <span class="dot y"></span>
+        <span class="dot g"></span>
+      </div>
+      <div class="crumbs">404 · File not found</div>
+    </div>
+
+    <div class="lost-body">
+      <div class="lost-icon" aria-hidden="true">🗂️</div>
+      <div class="lost-code">Error 404</div>
+      <h1 class="lost-title">This file was<br/>moved or never existed.</h1>
+      <p class="lost-msg">
+        Either the link is old, or I'm <b>still building this part</b>. Either way, here's where you can actually go:
+      </p>
+
+      <div class="lost-cmd">
+        <span class="p">~</span> <span class="p">$</span> <span class="c">cd</span> <span class="out">~/portfolio</span><br/>
+        <span class="p">~</span> <span class="p">$</span> <span class="c">ls</span> <span class="out">/* take me back */</span><span class="cursor"></span>
+      </div>
+
+      <div class="lost-actions">
+        <a href="/" class="primary">→ Back to portfolio</a>
+        <a href="https://www.linkedin.com/in/adriel-arizona/" target="_blank" rel="noopener" class="secondary">↗ LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="lost-foot">
+  ✦ &nbsp; <a href="/">adriel arizona</a> &nbsp; · &nbsp; chicago &nbsp; · &nbsp; still building &nbsp; ✦
+</div>
+
+<script>
+  // Sync theme with main site
+  (function(){
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+    } catch(e){}
+  })();
+</script>
+
+</body>
+</html>
